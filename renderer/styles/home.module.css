@@ -11,6 +11,29 @@
     align-items: center;
 }
 
+.circle{
+    height: 5em;
+    width: 5em;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.button{
+    margin-top: 1em;
+    padding: 1em;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button a{
+    text-decoration: none;
+    color: black;
+}
+
 .row{
     display: flex;
     flex-direction: row;
@@ -18,17 +41,58 @@
     align-items: center;
     width: 100%;
     height: 100%;
+    border: 2px solid black;
 }
+
+
+
+
+
+/* Compiler page*/
+.compilerPage{
+    margin: -8px;
+    height: 100vh !important;
+    width: 100vw !important;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 3em;
+}
+
+.backButton{
+    width: 4em;
+    height: 4em;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 0.5em;
+    left: 1em;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.backButton a{
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+}
+
 .sideBar{
-    height: 80%;
+    height: 90%;
     width: 20%;
     border: 3px solid black;
     border-radius: 10px;
+    margin-bottom: 1em;
 }
 
 .compiler{
-    height: 80%;
+    height: 90%;
     width: 70%;
     border: 3px solid black;
     border-radius: 10px;
+    margin-bottom: 1em;
 }

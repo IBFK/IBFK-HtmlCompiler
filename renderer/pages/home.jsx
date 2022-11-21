@@ -10,9 +10,20 @@ function Home() {
         <title>Home</title>
       </Head>
       <div className={styles.container}>
-        <Link href="/next">
-          <a>Go to home</a>
-        </Link>
+        <div className={styles.row}>
+          <div className={styles.circle}></div>
+        </div>
+        <div className={styles.row}>
+          <div className={styles.circle}></div>
+          <div className={styles.circle}></div>
+        </div>
+        <div className={styles.row}>
+          <div className={styles.button}></div>
+          <div className={styles.button}>
+            <Link href="/next"><a>START</a></Link>
+          </div>
+          <div className={styles.button}></div>
+        </div>
       </div>
     </>
   );

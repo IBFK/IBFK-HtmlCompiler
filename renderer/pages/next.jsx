@@ -9,15 +9,12 @@ function Next() {
       <Head>
         <title>Next</title>
       </Head>
-      <div className={styles.container}>
-        <Link href="/home">
-          <a>Go to home</a>
-        </Link>
-        <div className={styles.row}>
+      <div className={styles.compilerPage}>
+          <div className={styles.backButton}>
+            <Link href="/home"><a>BACK</a></Link>
+          </div>
           <div className={styles.sideBar}></div>
-          <div className={styles.compiler}></div>
-        </div>
-
+          <div className={styles.compiler}></div> 
       </div>
     </React.Fragment>
   );
