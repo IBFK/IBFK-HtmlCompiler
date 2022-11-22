@@ -19,6 +19,8 @@ function Next() {
     changeColor(code);
   };
 
+  
+
   function changeColor(text) {
       if (text === words[0]) {
         setBackGroundColor('green');
