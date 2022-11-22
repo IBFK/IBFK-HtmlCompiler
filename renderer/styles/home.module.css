@@ -96,7 +96,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    flex-wrap: wrap;
+    gap: 1em;
 }
 
 .compiler{
@@ -109,9 +110,12 @@
 }
 
 .text{
+    height: 90%;
+    width: 90%;
     color: #000000;
     font-size: 1.5em;
     font-weight: bold;
+    overflow-wrap: break-word;
 }
 
 .compiler textarea{

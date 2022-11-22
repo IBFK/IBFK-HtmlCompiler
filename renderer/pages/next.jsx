@@ -9,29 +9,33 @@ import {useState} from 'react';
 function Next() {
 
   const [backGroundColor, setBackGroundColor] = useState('');
-  const words = ['<h1>Next.js</h1>', '<h2>React</h1>', '<h3>Node.js</h1>'];
+  const words = ['hola', 'master'];
 
   const [message, setMessage] = useState('');
 
   const compiling = event => {
     let code = event.target.value;
     setMessage(code);
+    toString(code);
     changeColor(code);
   };
 
   
-
-  function changeColor(text) {
-      if (text === words[0]) {
-        setBackGroundColor('green');
-      } else if (text === words[1]) {
-        setBackGroundColor('blue');
-      } else if (text === words[2]) {
-        setBackGroundColor('red');
-      } else {
-        setBackGroundColor('white');
-      }
+const toString = (code) => {
+  let string = '';
+  for (let i = 0; i < code.length; i++) {
+    string += code[i];
   }
+  return string;
+};
+
+
+  const changeColor = (text) => {
+    // for(let word of words) {
+    //   toString(text) === word ? setBackGroundColor('green') : setBackGroundColor('white');
+    // }
+  };
+
   return (
     <React.Fragment>
       <Head>
