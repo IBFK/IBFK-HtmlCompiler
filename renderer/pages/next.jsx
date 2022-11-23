@@ -9,32 +9,28 @@ import {useState} from 'react';
 function Next() {
 
   const [backGroundColor, setBackGroundColor] = useState('');
-  const words = ['hola', 'master'];
-
   const [message, setMessage] = useState('');
 
+
+  const words = ['1','4','3','2','<h1></h1>'];
+  
   const compiling = event => {
     let code = event.target.value;
+    changeColor(toString(code));
     setMessage(code);
-    toString(code);
-    changeColor(code);
   };
 
-  
-const toString = (code) => {
-  let string = '';
-  for (let i = 0; i < code.length; i++) {
-    string += code[i];
-  }
-  return string;
-};
-
+  const toString = (code) => {
+    let string = '';
+    for (let i = 0; i < code.length; i++) {
+      string += code[i];
+    }
+    return string;
+  };
 
   const changeColor = (text) => {
-    // for(let word of words) {
-    //   toString(text) === word ? setBackGroundColor('green') : setBackGroundColor('white');
-    // }
-  };
+    words.includes(text) ? setBackGroundColor('green') : setBackGroundColor('white');
+  }
 
   return (
     <React.Fragment>
@@ -53,18 +49,17 @@ const toString = (code) => {
             </div>
           </div>
 
-          <div onClick={changeColor} className={styles.compiler}>
+          <div className={styles.compiler}>
             <textarea
               onChange={compiling} 
               name="compiler" 
               value={message}
               id="message">
             </textarea>
-          </div> 
-
+          </div>
       </div>
     </React.Fragment>
   );
-};
+}
 
 export default Next;
