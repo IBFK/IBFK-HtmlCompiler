@@ -29,22 +29,19 @@
     user-select: none; 
 }
 
-.circle:nth-child(1)
-{
-    margin-left: 1em;
-    border: 2px solid white;
+.circle:nth-child(1){
+    margin-left: 2em;
+    /* border: 2px solid white; */
 }
 
-.circle:nth-child(2)
-{
-    margin-left: 1em;
-    border: 2px solid red;
+.circle:nth-child(2){
+    margin-right: 2em;
+    /* border: 2px solid red; */
 }
 
-.circle:nth-child(3)
-{
+.circle:nth-child(3){
     margin-left: 1em;
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
 }
 
 /* .circle:nth-child(1) img{

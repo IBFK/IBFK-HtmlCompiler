@@ -9,11 +9,17 @@ function Next() {
   const [backGroundColor, setBackGroundColor] = useState('');
   const [message, setMessage] = useState('');
 
+  
+  //inicia con <tag> 
+  //acepta caracter entre uno o mas y es opcional
+  //cierra con </tag>
   const tags = {
-    h1: /^[<h1>]+.+?<h1>$/,
-    p: /^[<p>]+.+?<p>$/,
-    a: /^[<a>]+.+?<a>$/,
-    number: /^<\d>$/
+    h1: /^<h1>(.+)?<\/h1>$/, 
+    h2: /^<h2>(.+)?<\/h2>$/,
+    p: /^<p>(.+)?<\/p>$/,
+    div: /^<div>(.+)?<\/div>$/,
+    a: /^<a>(.+)?<\/a>$/,
+    img: /^<img>(.+)?<\/img>$/,
   };
 
 
