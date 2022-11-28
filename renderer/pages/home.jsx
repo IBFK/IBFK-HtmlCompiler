@@ -11,18 +11,22 @@ function Home() {
       </Head>
       <div className={styles.container}>
         <div className={styles.row}>
-          <div className={styles.circle}></div>
+          <div className={styles.circle}>
+            <img src="/images/ittLogo.png" alt="" />
+          </div>
+          <div className={styles.circle}>
+            <img src="/images/ibfkLogo.png" alt="" />
+          </div>
         </div>
         <div className={styles.row}>
-          <div className={styles.circle}></div>
-          <div className={styles.circle}></div>
+         <div className={styles.circle}>
+            <img src="/images/htmlLogo.png" alt="" />
+          </div>        
         </div>
         <div className={styles.row}>
-          <div className={styles.button}></div>
           <div className={styles.button}>
             <Link href="/next"><a>START</a></Link>
           </div>
-          <div className={styles.button}></div>
         </div>
       </div>
     </>

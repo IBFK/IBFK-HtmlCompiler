@@ -4,32 +4,53 @@ import Link from 'next/link';
 import styles from '/styles/home.module.css';
 import {useState} from 'react';
 
-
-
 function Next() {
 
   const [backGroundColor, setBackGroundColor] = useState('');
   const [message, setMessage] = useState('');
 
-
-  const words = ['1','4','3','2','<h1></h1>'];
-  
-  const compiling = event => {
-    let code = event.target.value;
-    changeColor(toString(code));
-    setMessage(code);
+  const tags = {
+    h1: /^[<h1>]+.+?<h1>$/,
+    p: /^[<p>]+.+?<p>$/,
+    a: /^[<a>]+.+?<a>$/,
+    number: /^<\d>$/
   };
 
-  const toString = (code) => {
+
+  const evaluateRegex = (inputText) => {
+    for (const [key, value] of Object.entries(tags)) {
+      if (value.test(inputText)) {
+        return key;
+      }
+      // if (inputText.match(value)) {
+      //   return value;
+      // }
+    }
+  };
+
+  
+  
+  const compiling = event => {
+    let inputText = event.target.value;
+
+    changeBgColor(toString(inputText));
+    setMessage(inputText);
+  };
+
+  const toString = (inputText) => {
     let string = '';
-    for (let i = 0; i < code.length; i++) {
-      string += code[i];
+    for (let i = 0; i < inputText.length; i++) {
+      string += inputText[i];
     }
     return string;
   };
 
-  const changeColor = (text) => {
-    words.includes(text) ? setBackGroundColor('green') : setBackGroundColor('white');
+
+
+
+  const changeBgColor = (text) => {
+    // words.includes(text) ? setBackGroundColor('green') : setBackGroundColor('white');
+    evaluateRegex(text) ? setBackGroundColor('green') : setBackGroundColor('white');
   }
 
   return (
